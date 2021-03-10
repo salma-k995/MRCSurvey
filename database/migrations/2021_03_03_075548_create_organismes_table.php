@@ -15,10 +15,11 @@ class CreateOrganismesTable extends Migration
     {
         Schema::create('organismes', function (Blueprint $table) {
             $table->uuid('id')->primary();
+            $table->string('name');
             $table->string('adresse');
             $table->string('tel');
             $table->string('email');
-            
+            $table->boolean('stat');
             $table->timestamps();
         });
     }
